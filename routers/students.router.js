@@ -20,6 +20,7 @@ router.get("/:id", (req, res) => {
   } else {
     res.status(404).send({ msg: "Student not found" });
   }
+  //name grades id class
 });
 
 module.exports = router;

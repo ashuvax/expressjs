@@ -14,3 +14,9 @@ document.addEventListener("submit", (e) => {
       }
     });
 });
+const select = document.querySelector("#type");
+select.addEventListener("change", (e) => {
+  const type = e.target.value;
+  switch (type) {
+  }
+});

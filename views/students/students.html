@@ -15,12 +15,15 @@
     <form>
       <label for="id">id</label>
       <input type="number" name="id" id="id" required />
-      <button type="submit">get data of student</button>
+      <select name="type" id="type" required>
+        <option value="">select type</option>
+        <option value="read">get data of student</option>
+        <option value="delete">delete student</option>
+        <option value="create">crate new student</option>
+      </select>
+      <button type="submit">submit</button>
     </form>
     <div id="Massege"></div>
-    <div id="name"></div>
-    <div id="age"></div>
-    <div id="grades"></div>
     <script src="students.js"></script>
   </body>
 </html>

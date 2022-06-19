@@ -3,10 +3,9 @@ document.addEventListener("submit", (e) => {
   const data = {
     username: e.target.username.value,
     password: e.target.password.value,
-    role: e.target.teacher.checked ? "teacher" : "admin",
   };
 
-  fetch("http://localhost:3000/signin", {
+  fetch("http://localhost:3000/login", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {

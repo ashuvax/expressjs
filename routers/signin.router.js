@@ -13,7 +13,9 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   const body = req.body;
   body.password = bcrypt.hashSync(body.password, 10);
-  const users = JSON.parse(fs.readFileSync("../data/users.json"));
+  const users = JSON.parse(
+    fs.readFileSync(path.join(__dirname + "/../data/users.json"))
+  );
   users.push(body);
   fs.writeFileSync(
     path.join(__dirname, "../data/users.json"),
